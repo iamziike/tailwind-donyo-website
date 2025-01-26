@@ -21,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(bricolageGrotesque.className, "antialiased")}>
+      <body
+        className={clsx(
+          bricolageGrotesque.className,
+          "bg-background antialiased"
+        )}
+      >
         <SidebarProvider defaultOpen={false}>
           <div className="flex flex-col w-full md:max-w-7xl md:mx-auto">
             <Navbar />
