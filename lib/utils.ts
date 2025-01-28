@@ -26,3 +26,4 @@ export const waitFor = async (secs: number) => {
     }, secs * 1000);
   });
 };
+

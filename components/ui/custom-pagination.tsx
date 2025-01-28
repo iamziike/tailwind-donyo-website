@@ -1,6 +1,6 @@
 "use client";
 
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 import {
   Pagination,
   PaginationContent,
@@ -26,7 +26,7 @@ const CustomPagination = ({ pageIndex, totalPages, className }: Props) => {
   };
 
   const disableLinkIf = (condition: boolean) => {
-    return clsx({ "pointer-events-none": condition });
+    return cn({ "pointer-events-none": condition });
   };
 
   const getNumberedButtons = () => {
@@ -41,7 +41,7 @@ const CustomPagination = ({ pageIndex, totalPages, className }: Props) => {
   };
 
   return (
-    <Pagination className={clsx(className)}>
+    <Pagination className={cn(className)}>
       <PaginationContent>
         <PaginationItem className={disableLinkIf(pageIndex === 1)}>
           <PaginationPrevious href={formatPageURL(pageIndex - 1)} />
@@ -50,7 +50,7 @@ const CustomPagination = ({ pageIndex, totalPages, className }: Props) => {
         {getNumberedButtons().map((button) => (
           <PaginationItem
             key={button.page}
-            className={clsx(disableLinkIf(pageIndex === button.page))}
+            className={cn(disableLinkIf(pageIndex === button.page))}
           >
             <PaginationLink
               isActive={pageIndex === button.page}

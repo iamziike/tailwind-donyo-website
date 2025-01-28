@@ -33,10 +33,12 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center">
           <LanguageSelect />
-          <ThemeControl />
-          <Badge className="rounded-full p-4 py-2 text-md cursor-pointer">
+          <div className="ms-5 me-2">
+            <ThemeControl />
+          </div>
+          <Badge className="rounded-full p-4 py-2 text-md cursor-pointer font-medium text-sm">
             Sign In{" "}
             <span className="ml-2">
               <ArrowRight size={16} />

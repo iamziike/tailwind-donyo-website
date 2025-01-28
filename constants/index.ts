@@ -316,3 +316,10 @@ export const LOCATIONS_TO_VISIT = [
     ],
   },
 ];
+
+export const THEMES = {
+  LIGHT: "light",
+  DARK: "dark",
+  SYSTEM: "system",
+  RED_MOON: "red-moon",
+} as const;

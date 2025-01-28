@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CustomPagination from "@/components/ui/custom-pagination";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
@@ -13,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import CustomEmptyState from "@/components/ui/custom-empty-state";
+import CustomImage from "@/components/ui/custom-image";
 
 interface Props {
   filters: HomeFilterTypes;
@@ -32,10 +32,10 @@ const Home = async ({ filters }: Props) => {
           {locations?.data?.map((location) => (
             <Card
               key={location.id}
-              className="flex flex-col rounded-sm hover:bg-accent transition ease-in-out duration-300 cursor-pointer"
+              className="flex flex-col rounded-md hover:bg-accent transition ease-in-out duration-300 cursor-pointer overflow-hidden"
             >
               <CardHeader className="p-0 overflow-hidden">
-                <Image
+                <CustomImage
                   src={location.images[0]}
                   alt={location.name}
                   width={486}
@@ -54,7 +54,7 @@ const Home = async ({ filters }: Props) => {
                     Details <ArrowRight size={18} />
                   </div>
                 </CardTitle>
-                <CardDescription className="text-primary leading-relaxed">
+                <CardDescription className="text-card-foreground leading-relaxed">
                   {location.description}
                 </CardDescription>
               </CardContent>
