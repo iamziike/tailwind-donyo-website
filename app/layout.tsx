@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           bricolageGrotesque.className,
@@ -33,7 +33,7 @@ export default function RootLayout({
           defaultTheme={THEMES.RED_MOON}
           enableSystem
           disableTransitionOnChange
-          themes={[THEMES.LIGHT, THEMES.DARK, THEMES.SYSTEM, THEMES.RED_MOON]}
+          themes={["light", "dark", "system", "red-moon"]}
         >
           <SidebarProvider defaultOpen={false}>
             <div className="flex flex-col w-full md:max-w-7xl md:mx-auto">

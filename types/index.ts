@@ -36,7 +36,7 @@ export interface ApiPaginatedResponse<T = null> {
 }
 
 export interface PageComponent<T = object> {
-  searchParams: T;
+  searchParams: Promise<T>;
 }
 
 export type LocationsToVisit = typeof LOCATIONS_TO_VISIT;
