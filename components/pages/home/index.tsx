@@ -50,7 +50,7 @@ const Home = async ({ filters }: Props) => {
               <CardContent className="group px-4 py-5 space-y-4">
                 <CardTitle className="text-lg flex items-center justify-between">
                   <span>{location.name}</span>
-                  <div className="group-hover:flex items-center gap-2 hidden font-light">
+                  <div className="items-center gap-2 hidden font-light">
                     Details <ArrowRight size={18} />
                   </div>
                 </CardTitle>
