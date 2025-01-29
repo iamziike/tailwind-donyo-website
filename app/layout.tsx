@@ -21,11 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="no-scrollbar" suppressHydrationWarning>
       <body
         className={cn(
           bricolageGrotesque.className,
-          "bg-background antialiased"
+          "bg-background antialiased scrollbar"
         )}
       >
         <ThemeProvider
